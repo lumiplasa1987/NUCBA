@@ -1,0 +1,209 @@
+@font-face {
+    font-family:simp;
+    src: url(akbar.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* img {
+    width: auto;
+    height: auto;
+}
+
+
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background: #4fbed1;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+
+    header {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+
+        h1 {
+            font-family: simp;
+            display: flex;
+            justify-content: center;
+            font-size: 60px;
+            margin-top: 40px;
+            animation: spin 3s infinite ;
+        }
+
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contdivs {
+            margin-right: 1.5rem;
+
+           // First Column
+           &:nth-of-type(1){
+            margin-right: 4rem;
+            div{
+                width: 80px;
+                height: 80px;
+
+                &:nth-of-type(1){
+                    position: relative;
+                    left: 1.5rem;
+                    margin-bottom: 6rem;
+                    animation: clock-animation 1s infinite linear;
+                }
+
+                &:nth-of-type(2){
+                    animation: worm-animation 2s infinite alternate;
+                }
+
+                &:nth-of-type(3){
+                    margin: 1.9rem 0 2.1rem 0;
+                }
+
+                &:nth-of-type(4){
+                    position: relative;
+                    left: 2.5rem;
+                    width: 70px;
+                    height: 70px;
+                }
+
+                &:nth-of-type(5){
+                    margin-top: 4.5rem;
+                    animation: worm-animation 5s infinite alternate-reverse;
+                }
+            }
+        }
+
+        // Second Column
+        &:nth-of-type(2){
+           div {
+                width: 80px;
+                height: 80px;
+
+                &:nth-of-type(2){
+                    margin: 1rem 0 3rem 0;
+                }
+
+                &:nth-of-type(3){
+                    position: relative;
+                    left: 2rem;
+                    width: 70px;
+                    animation: clock-animation 3s infinite alternate-reverse ;
+                }
+           }
+        }
+
+        // Three Column
+        &:nth-of-type(3){
+            margin-right: 4rem;
+
+            div{
+
+                &:hover{
+                    animation: rotate-animation 2s infinite linear;
+                }
+            }
+        }
+
+        // Four Column
+        &:nth-of-type(4){
+            div {
+                width: 75px;
+                height: 75px;
+
+                &:nth-of-type(1){
+                    animation: worm-animation 7s infinite linear;
+                }
+
+                &:nth-of-type(2){
+                    margin: 1rem 0 4rem 0;
+                }
+
+                &:nth-of-type(3){
+                    position: relative;
+                    right: 2.3rem;
+                    width: 110px;
+                    height: 110px;
+
+                    @media (max-width: 1200px){
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        // Five Column
+        &:nth-of-type(5){
+            margin-right: 0;
+
+            div {
+                width: 75px;
+                height: 75px;
+
+                &:nth-of-type(2){
+                    margin: 8rem 0 8rem 0;
+                }
+                &:nth-of-type(3){
+                    animation: clock-animation 3s infinite alternate-reverse ;
+                }
+            }
+        }
+    }
+}
+}
+
+@keyframes worm-animation {
+    from {
+        margin-left: 100%;
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes clock-animation {
+    from {
+        margin-left: 100%;
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes rotate-animation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin{
+    from{
+      transform: rotateX(-20deg) rotateY(0deg);
+    }
+  
+    to{
+      transform: rotateX(-20deg) rotateY(360deg);
+    }
+  }
