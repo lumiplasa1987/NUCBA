@@ -54,31 +54,29 @@ header {
 .about {
   display: flex;
   justify-content: center;
-  background-color: transparent; }
-  .about div {
-    background-image: url(/proyectoIntegrador/src/assets/img/FondoSEction.jpg); }
-    .about div h1 {
-      display: flex;
-      color: #1E6540;
-      justify-content: center;
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 48px;
-      margin-top: 1.5rem; }
-    .about div span {
-      display: flex;
-      color: #1E6540;
-      justify-content: flex-end;
-      align-items: center;
-      font-family: 'Rock Salt', cursive;
-      font-size: 24px;
-      margin-bottom: 5rem;
-      margin-top: 3.5rem;
-      text-align: center; }
-    .about div #imgAbout {
-      width: 80%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end; }
+  background-image: url(/proyecto1/src/assets/css/img/FondoSEction.jpg); }
+  .about div h1 {
+    display: flex;
+    color: #1E6540;
+    justify-content: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 48px;
+    margin-top: 1.5rem; }
+  .about div span {
+    display: flex;
+    color: #1E6540;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 24px;
+    margin-bottom: 5rem;
+    margin-top: 3.5rem;
+    text-align: center; }
+  .about div #imgAbout {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
 
 .description {
   background-color: #F3F0CD;
