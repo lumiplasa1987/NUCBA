@@ -1,0 +1,19 @@
+div {
+  width: 300px;
+  height: 300px;
+  background-color: aliceblue;
+}
+
+div p {
+  color: red;
+  font-weight: bold;
+}
+
+div span {
+  color: blue;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=styles.css.map */
+
+/*# sourceMappingURL=styles.css.map */

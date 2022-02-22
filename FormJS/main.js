@@ -25,8 +25,8 @@ const myForm = event => {
     !comentarios.value ? comentarios.classList.add('error') :
     formState.push({ element: 'comments', value: comentarios.value })
 
-    /*check.value ? alert('aceptar terminos y condiciones'):
-    alert ('continuar')*/
+    check.checked ? alert('aceptar terminos y condiciones'):
+    alert ('continuar')
 
 
     const dato = document.getElementById('formValues')

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom Events</h1>
+    <button onclick= {prueba()}>Comenzar</button>
+    <span>Resultado:</span>
+    <span class="resultado"></span>
+
+    <div class="calculadoraContainer">
+        <h1>Calculadora</h1>
+        <ul>
+            <li>
+                <span>Esta calculadorasolo puede hacer operacionescon dos numeros </span>
+            </li>
+            <li>
+                <span>solo  podras ingresar: sumar, restar, multiplicar o dividir</span>
+            </li>
+            <li>
+                <span>El resultado lo veras en pantalla</span>
+            </li>
+        </ul>
+        <div>
+            <span>RESULTADO</span>
+            <span id="resultadoC"></span>
+        </div>
+        <button onclick={calculadora()}>Comenzar a calcular</button>
+    </div>
+<script src=".\main.js"> </script>
+</body>
+</html>

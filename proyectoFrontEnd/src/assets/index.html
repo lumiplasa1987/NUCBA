@@ -24,7 +24,7 @@
                         <li><a href="#catalogo">Catálogo</a></li>
                         <li><a href="paginas/inicioSesion.html">Registro / Iniciar sesión</a></li>
                         <li><a href="#contacto">Contacto</a></li>
-                        <li><a href="#cart"><img src="./img/Carritonavbar.png" alt="img carrito"></a></li>
+                        <li id="cart"><a href="#cart"><img src="./img/Carritonavbar.png" alt="img carrito"></a></li>
                     </ul>
                 </nav>
                 <div>
@@ -98,7 +98,7 @@
                         </div>
                         <span>Cort MBM</span>
                         <span>$56.700</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Cort MBM',56700)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -106,7 +106,7 @@
                         </div>
                         <span>Cort X300</span>
                         <span>$71.500</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Cort X300',71500)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -114,7 +114,7 @@
                         </div>
                         <span>Fender Squire</span>
                         <span>$61.200</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Fender Squire',61200)" >Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -122,7 +122,7 @@
                         </div>
                         <span>Fender Stratocaster</span>
                         <span>$120.000</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Fender Stratocaster',120000)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -130,7 +130,7 @@
                         </div>
                         <span>Gibson Epiphone</span>
                         <span>$100.600</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('FGibson Epiphone',100600)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -138,7 +138,7 @@
                         </div>
                         <span>Gibson Memphis</span>
                         <span>$445.000</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Gibson Memphis',445000)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -146,7 +146,7 @@
                         </div>
                         <span>Ibanez Gio</span>
                         <span>$46.200</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Ibanez Gio',46200)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -154,7 +154,7 @@
                         </div>
                         <span>Ibanez JEM77</span>
                         <span>$118.800</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Ibanez JEM77',118000)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -162,7 +162,7 @@
                         </div>
                         <span>Jackson King V</span>
                         <span>$98.300</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Jackson King',98300)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -170,7 +170,7 @@
                         </div>
                         <span>Jackson Dinky</span>
                         <span>$79.100</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Jackson Dinky',79100)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -178,7 +178,7 @@
                         </div>
                         <span>Washburn WR154</span>
                         <span>$63.100</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Washburn WR154',63100)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -186,7 +186,7 @@
                         </div>
                         <span>Washburn Strato</span>
                        <span>$67.200</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addGuitar('Washburn Strato',67100)">Añadir al carrito</button>
                     </li>
                 </ul>
             </div>
@@ -244,5 +244,6 @@
             </div>
         </footer>
     </main>
+    <script src="./js/main.js"></script>
 </body>
 </html>
