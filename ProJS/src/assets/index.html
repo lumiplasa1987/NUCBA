@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Luckiest+Guy&family=Pirata+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href=".\sass/styles.css">
     <title>Guitar Sale</title>
 </head>
 <body>
@@ -24,7 +24,13 @@
                         <li><a href="#catalogo">Catálogo</a></li>
                         <li><a href="paginas/inicioSesion.html">Registro / Iniciar sesión</a></li>
                         <li><a href="#contacto">Contacto</a></li>
-                        <li><a href="#cart"><img src="./img/Carritonavbar.png" alt="img carrito"></a></li>
+                        <li><a href="#cart">
+                                <div>
+                                    <img src="./img/Carritonavbar.png" alt="img carrito"> <br>
+                                     <span id="totalItems"></span>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <div>
@@ -91,14 +97,14 @@
         <section class="catalogo" id ="catalogo">
             <div class="pricipalWrapper">
                 <h2>Lista de productos</h2>
-                <ul>
+                <ul id="List-products">
                     <li>
                         <div>
                             <img src=".\img/Cort-MBM.png" alt="image guitar">
                         </div>
                         <span>Cort MBM</span>
                         <span>$56.700</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Cort MBM', 56700, 1)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -106,7 +112,7 @@
                         </div>
                         <span>Cort X300</span>
                         <span>$71.500</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Cort X300', 71500, 1)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -114,7 +120,7 @@
                         </div>
                         <span>Fender Squire</span>
                         <span>$61.200</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Fender Squire', 61200, 1)" >Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -122,7 +128,7 @@
                         </div>
                         <span>Fender Stratocaster</span>
                         <span>$120.000</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Fender Stratocaster', 120000, 1)" >Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -130,7 +136,7 @@
                         </div>
                         <span>Gibson Epiphone</span>
                         <span>$100.600</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Gibson Epiphone', 100000, 1)" >Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -138,7 +144,7 @@
                         </div>
                         <span>Gibson Memphis</span>
                         <span>$445.000</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Gibson Memphis', 445000, 1)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -146,7 +152,7 @@
                         </div>
                         <span>Ibanez Gio</span>
                         <span>$46.200</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Ibanez Gio', 46200, 1)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -154,7 +160,7 @@
                         </div>
                         <span>Ibanez JEM77</span>
                         <span>$118.800</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Ibanez JEM77', 118000, 1)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -162,7 +168,7 @@
                         </div>
                         <span>Jackson King V</span>
                         <span>$98.300</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Jackson King V', 98300, 1)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -170,7 +176,7 @@
                         </div>
                         <span>Jackson Dinky</span>
                         <span>$79.100</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Jackson Dinky', 79100, 1)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -178,7 +184,7 @@
                         </div>
                         <span>Washburn WR154</span>
                         <span>$63.100</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Washburn WR154', 63100, 1)">Añadir al carrito</button>
                     </li>
                     <li>
                         <div>
@@ -186,63 +192,48 @@
                         </div>
                         <span>Washburn Strato</span>
                        <span>$67.200</span>
-                        <button>Añadir al carrito</button>
+                        <button onclick="addProduct('Washburn Strato', 67200, 1)">Añadir al carrito</button>
                     </li>
                 </ul>
             </div>
         </section>
         <section class ="cart" id= "cart">
-            <div class="principalWrapper"></div>
                 <h2>MIS COMPRAS</h2>
                 <P>Si estas de acuerdo con lo que está en el carrito, hace click en comprar</P>
-                <div>
-                    <div>
-                        <img src=".\img/Jackson-King V.png" alt="image guitar">
+                <div class="cart-wrapper" id="cartWrapper">
+                    <div class="emptyProductsMessage">
+                        No tenés productos seleccionados
                     </div>
-                    <span>Jackson King V</span>
-                    <span>$98.300</span>
-                </div>
-                <div>
-                    <div>
-                        <img src=".\img/Gibson-epiphone.jpg" alt="image guitar">
-                    </div>
-                    <span>Gibson Epiphone</span>
-                    <span>$100.600</span>
-                </div>
-                <div>
-                    <div>
-                        <img src=".\img/washburn-wr154.jpg" alt="image guitar">
-                    </div>
-                    <span>Washburn WR154</span>
-                    <span>$63.100</span>
                 </div>
 
-                <div id="Total">
-                    <span>Total: $262.000</span>
+                <div class ="total" id="Total">
+                    <span>Total: $</span>
+                    <span  class ="totalProducts" id ="totalProducts"> </span>
                 </div>
-                <button>Comprar</button>
+                    <a href="paginas/inicioSesion.html"> <button onclick="irRegistro()">Comprar</button> </a>
             </div>
         </section>
         <footer id ="contacto">
             <h2> CONTACTO</h2>
             <div class="principalWrapper">
                 <div>
-                    <img src=".\img/fbLogo.png" alt="Logo Fb">
+                    <a href="./paginas/enConstruccion.html"> <img src=".\img/fbLogo.png" alt="Logo Fb"></a>
                 </div>
                 <div>
-                    <img src=".\img/igLogo.png" alt="Logo Ig">
+                    <a href="./paginas/enConstruccion.html">  <img src=".\img/igLogo.png" alt="Logo Ig"> </a>
                 </div>
                 <div>
-                    <img src=".\img/logoLinkeidin.png" alt="Logo Linkedin">
+                    <a href="./paginas/enConstruccion.html"> <img src=".\img/logoLinkeidin.png" alt="Logo Linkedin"></a>
                 </div>
                 <div>
-                    <img src=".\img/logoYoutube.png" alt="Logo youtube">
+                    <a href="./paginas/enConstruccion.html"> <img src=".\img/logoYoutube.png" alt="Logo youtube"></a>
                 </div>
                 <div>
-                    <img src=".\img/logoTwitter.png" alt="Logo Twitter">
+                    <a href="./paginas/enConstruccion.html">  <img src=".\img/logoTwitter.png" alt="Logo Twitter"></a>
                 </div>
             </div>
         </footer>
     </main>
+    <script src=".\js/main.js"></script>
 </body>
 </html>
